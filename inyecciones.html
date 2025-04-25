@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vehículos Convertidos | Multi Service Flash</title>
+    <link rel="icon" href="images/multiflashlogo.png" type="image/png" sizes="128x128">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        /* Estilos para el encabezado de Inyección Directa */
+        .hero-inyeccion {
+            background-image: url('images/inyeccioon.avif'); /* Reemplaza con tu imagen */
+            background-size: cover;
+            background-position: center;
+            height: 300px; /* Ajusta la altura según necesites */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px; /* Espacio entre el encabezado y el contenido */
+        }
+
+        .hero-inyeccion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Filtro oscuro */
+        }
+
+        .hero-inyeccion-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-inyeccion-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-inyeccion-breadcrumbs {
+            font-size: 0.9em;
+        }
+
+        .hero-inyeccion-breadcrumbs a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-inyeccion-breadcrumbs span {
+            color: lightgray;
+            margin: 0 5px;
+        }
+
+        /* Estilos para la sección de "INYECCIÓN DIRECTA" y "Vehículos convertidos" */
+        .inyeccion-directa-container {
+            text-align: center; /* Centra el contenido */
+            padding: 20px; /* Añade un poco de espacio alrededor */
+        }
+
+        .inyeccion-directa-tag {
+            background-color: #8ac249;
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transform: skewX(-15deg);
+            display: inline-block;
+        }
+
+        .vehiculos-convertidos-title {
+            color: #004d99;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .vehiculos-convertidos-text {
+            color: #c95f08;
+            font-size: 1em;
+        }
+
+        /* Estilos para los detalles (acordeones) */
+        .space-y-4 {
+            padding: 20px; /* Añade un poco de espacio alrededor de los acordeones */
+        }
+
+        details {
+            background-color: #f7fafc; /* Un gris claro similar a Tailwind bg-gray-100 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); /* Tailwind shadow */
+            padding: 1rem; /* Tailwind p-4 */
+            margin-bottom: 1rem; /* Espacio entre acordeones */
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600; /* Tailwind font-semibold */
+            color: #2c5282; /* Un azul oscuro similar a Tailwind text-blue-800 */
+            font-size: 1.25rem; /* Tailwind text-xl */
+            list-style: none; /* Oculta la flecha por defecto */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Espacio entre el texto y la flecha */
+        }
+
+        summary::after {
+            content: '+'; /* Puedes usar un icono de flecha aquí si lo prefieres */
+            font-size: 1.5rem;
+        }
+
+        details[open] summary::after {
+            content: '-'; /* Cambia la flecha cuando el acordeón está abierto */
+        }
+
+        .mt-4 {
+            margin-top: 1rem; /* Tailwind mt-4 */
+        }
+
+        .w-full {
+            width: 100%; /* Tailwind w-full */
+        }
+
+        .rounded {
+            border-radius: 0.25rem; /* Tailwind rounded */
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="hero-inyeccion">
+        <div class="hero-inyeccion-content">
+            <h1 class="hero-inyeccion-title">Inyección Directa e Indirecta</h1>
+            <p class="hero-inyeccion-breadcrumbs">
+                <a href="index.html">Inicio</a> <span>/</span> Inyección directa e indirecta
+            </p>
+        </div>
+    </div>
+
+    <section class="bg-white py-8">
+        <div class="container mx-auto text-center">
+            <div class="inyeccion-directa-container">
+                <span class="inyeccion-directa-tag">INYECCIÓN DIRECTA</span>
+                <h2 class="vehiculos-convertidos-title">Vehículos convertidos</h2>
+                <p class="vehiculos-convertidos-text">Con Multi Service podrás convertir cualquier vehículo de inyección directa</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="space-y-4">
+                <details class="bg-white rounded-lg shadow p-4">
+                    <summary class="cursor-pointer font-semibold text-blue-800 text-xl">MAZDA - MAZDA3</summary>
+                    <div class="mt-4">
+                        <img src="images/mazda1.jpg" alt="MAZDA - MAZDA3" class="rounded object-cover h-24 w-full" />
+                        <img src="images/mazda2.jpg" alt="MAZDA - MAZDA3" class="rounded object-cover h-24 w-full" />
+                        <img src="images/mazda3.jpg" alt="MAZDA - MAZDA3" class="rounded object-cover h-24 w-full" />
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow p-4">
+                    <summary class="cursor-pointer font-semibold text-blue-800 text-xl">NISSAN - JUKE</summary>
+                    <div class="mt-4">
+                        <img src="images/nisan1.jpg" alt="nisan juke" class="rounded object-cover h-24 w-full" />
+                        <img src="images/nisan2.jpg" alt="nisan juke" class="rounded object-cover h-24 w-full" />
+                        <img src="images/nisan3.jpg" alt="nisan juke" class="rounded object-cover h-24 w-full" />
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow p-4">
+                    <summary class="cursor-pointer font-semibold text-blue-800 text-xl">HYUNDAI - CRETA</summary>
+                    <div class="mt-4">
+                        <img src="images/CRETAA1.jpeg" alt="HYUNDAI - CRETA" class="rounded object-cover h-24 w-full" />
+                        <img src="images/CRETAA2.jpeg" alt="HYUNDAI - CRETA2" class="rounded object-cover h-24 w-full" />
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+  <!-- SECCIÓN: INYECCIÓN INDIRECTA -->
+  <section class="bg-white py-8">
+    <div class="container mx-auto text-center">
+        <div class="inyeccion-indirecta-container">
+            <span class="inyeccion-indirecta-tag">INYECCIÓN INDIRECTA</span>
+            <h2 class="vehiculos-convertidos-title">Vehículos convertidos</h2>
+            <p class="vehiculos-convertidos-text">Con Multi Service podrás convertir cualquier vehículo de inyección indirecta</p>
+        </div>
+    </div>
+</section>
+
+<style>
+       
+    /* Estilos para la sección de "INYECCIÓN INDIRECTA" y "Vehículos convertidos" */
+    .inyeccion-indirecta-container {
+        text-align: center; /* Centra el contenido */
+        padding: 20px; /* Añade un poco de espacio alrededor */
+    }
+
+    .inyeccion-indirecta-tag {
+        background-color: #8ac249;
+        color: white;
+        padding: 5px 15px;
+        font-size: 0.9em;
+        font-weight: bold;
+        transform: skewX(-15deg);
+        display: inline-block;
+    }
+
+    .vehiculos-convertidos-title {
+        color: #004d99;
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .vehiculos-convertidos-text {
+        color: #333;
+        font-size: 1em;
+    }
+
+    /* Estilos para los detalles (acordeones) */
+    .space-y-4 {
+        padding: 20px; /* Añade un poco de espacio alrededor de los acordeones */
+    }
+
+    details {
+        background-color: #f7fafc; /* Un gris claro similar a Tailwind bg-gray-100 */
+        border-radius: 0.5rem; /* Tailwind rounded-lg */
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); /* Tailwind shadow */
+        padding: 1rem; /* Tailwind p-4 */
+        margin-bottom: 1rem; /* Espacio entre acordeones */
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: 600; /* Tailwind font-semibold */
+        color: #2c5282; /* Un azul oscuro similar a Tailwind text-blue-800 */
+        font-size: 1.25rem; /* Tailwind text-xl */
+        list-style: none; /* Oculta la flecha por defecto */
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Espacio entre el texto y la flecha */
+    }
+
+    summary::after {
+        content: '+'; /* Puedes usar un icono de flecha aquí si lo prefieres */
+        font-size: 1.5rem;
+    }
+
+    details[open] summary::after {
+        content: '-'; /* Cambia la flecha cuando el acordeón está abierto */
+    }
+
+    .mt-4 {
+        margin-top: 1rem; /* Tailwind mt-4 */
+    }
+
+    .w-full {
+        width: 100%; /* Tailwind w-full */
+    }
+
+    .rounded {
+        border-radius: 0.25rem; /* Tailwind rounded */
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem; /* Tailwind mb-2 */
+    }
+    
+
+
+
+</style>
+
+<section class="py-8 bg-gray-100">
+    <div class="container mx-auto">
+        <div class="space-y-4">
+            <details class="bg-white rounded-lg shadow p-4">
+                <summary class="cursor-pointer font-semibold text-blue-800 text-xl">KIA - SPORTAGE</summary>
+                <div class="mt-4">
+                    <img src="images/kia1.jpg" alt="KIA - SPORTAGE" class="w-full rounded mb-2" />
+                    <img src="images/kia2.jpg" alt="KIA - SPORTAGE" class="w-full rounded mb-2" />
+                </div>
+            </details>
+
+            <details class="bg-white rounded-lg shadow p-4">
+                <summary class="cursor-pointer font-semibold text-blue-800 text-xl">TOYOTA - YARIS</summary>
+                <div class="mt-4">
+                    <img src="images/toy1.jpg" alt="TOYOTA - YARIS" class="w-full rounded mb-2" />
+                    <img src="images/toy2.jpg" alt="TOYOTA - YARIS" class="w-full rounded mb-2" />
+                    <img src="images/toy3.jpg" alt="TOYOTA - YARIS" class="w-full rounded mb-2" />
+                </div>
+            </details>
+        </div>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">HYUNDAI - ACCENT</summary>
+            <div class="mt-4">
+                <img src="images/hyun1.jpg" alt="HYUNDAI - ACCENT" class="w-full rounded mb-2" />
+                <img src="images/hyun2.jpg" alt="HYUNDAI - ACCENT" class="w-full rounded mb-2" />
+                <img src="images/hyun3.jpg" alt="HYUNDAI - ACCENT" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">SUZUKI - BALENO</summary>
+            <div class="mt-4">
+                <img src="images/GACSA01.jpeg" alt="SUZUKI - BALENO" class="w-full rounded mb-2" />
+                <img src="images/GACSA02.jpeg" alt="SUZUKI - BALENO" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">TOYOTA - RAV4</summary>
+            <div class="mt-4">
+                <img src="images/TOYOTA01.jpeg" alt="TOYOTA - RAV4" class="w-full rounded mb-2" />
+                <img src="images/TOYOTA02.jpeg" alt="TOYOTA - RAV4" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">MITSUBISHI - L200</summary>
+            <div class="mt-4">
+                <img src="images/MITSU01.jpeg" alt="MITSUBISHI - L200" class="w-full rounded mb-2" />
+                <img src="images/MITSU02.jpeg" alt="MITSUBISHI - L200" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">TOYOTA - ETIOS SEDÁN</summary>
+            <div class="mt-4">
+                <img src="images/ETIOS01.jpeg" alt="TOYOTA - ETIOS SEDÁN" class="w-full rounded mb-2" />
+                <img src="images/ETIOS02.jpeg" alt="TOYOTA - ETIOS SEDÁN" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">TOYOTA - ETIOS SEDÁN</summary>
+            <div class="mt-4">
+                <img src="images/ETIOS01.jpeg" alt="TOYOTA - ETIOS SEDÁN" class="w-full rounded mb-2" />
+                <img src="images/ETIOS02.jpeg" alt="TOYOTA - ETIOS SEDÁN" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">GREAT - WALL</summary>
+            <div class="mt-4">
+                <img src="images/GREAT01.jpeg" alt="GREAT WALL" class="w-full rounded mb-2" />
+                <img src="images/GREAT02.jpeg" alt="GREAT WALL2" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">TOYOTA - AGYA</summary>
+            <div class="mt-4">
+                <img src="images/AGYAA1.jpeg" alt="TOYOTA - AGYA" class="w-full rounded mb-2" />
+                <img src="images/AGYAA2.jpeg" alt="TOYOTA - AGYA" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">VOLKSWAGEN - VOYAGE</summary>
+            <div class="mt-4">
+                <img src="images/VOYAGEEE1.jpeg" alt="VOYAGEEE1" class="w-full rounded mb-2" />
+                <img src="images/VOYAGEEE2.jpeg" alt="VOYAGEEE1" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">GEELY - SEDAN EMGRAND</summary>
+            <div class="mt-4">
+                <img src="images/EMGRAND1.jpeg" alt="GEELY - SEDAN EMGRAND1" class="w-full rounded mb-2" />
+                <img src="images/EMGRAND2.jpeg" alt="GEELY - SEDAN EMGRAND" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">NISSAN - VERSA</summary>
+            <div class="mt-4">
+                <img src="images/VERSAAA1.jpeg" alt="NISSAN - VERSA" class="w-full rounded mb-2" />
+                <img src="images/VERSAAA2.jpeg" alt="NISSAN - VERSA" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">KIA - SORENTO</summary>
+            <div class="mt-4">
+                <img src="images/SORENTOO1.jpeg" alt="SORENTOO1" class="w-full rounded mb-2" />
+                <img src="images/SORENTOO2.jpeg" alt="SORENTOO2" class="w-full rounded mb-2" />
+            </div>
+        </details>
+        <details class="bg-white rounded-lg shadow p-4">
+            <summary class="cursor-pointer font-semibold text-blue-800 text-xl">GREAT - WALVERSAL M4</summary>
+            <div class="mt-4">
+                <img src="images/M401.jpeg" alt="GREAT - WALVERSAL M4" class="w-full rounded mb-2" />
+                <img src="images/M402.jpeg" alt="GREAT - WALVERSAL M4" class="w-full rounded mb-2" />
+            </div>
+        </details>
+    </div>
+</div>
+</section>
+<style>
+  /* Estilos generales para la sección de acordeones */
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .bg-gray-100 {
+    background-color: #f7fafc;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .space-y-4 > :not([hidden] ~ [hidden]) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Estilos para los detalles (acordeones) */
+  details {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c5282;
+    font-size: 1.25rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  summary::after {
+    content: '+';
+    font-size: 1.5rem;
+  }
+
+  details[open] summary::after {
+    content: '-';
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .rounded {
+    border-radius: 0.25rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Estilos específicos para la disposición de las imágenes dentro de los detalles */
+
+  /* ... other styles ... */
+
+  details .mt-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for desired width */
+    gap: 10px; /* Adjust spacing between images */
+  }
+
+  details .mt-4 img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    object-fit: cover; /* Fill the container, may crop */
+    max-height: 400px; /* Adjust for desired image height */
+  }
+
+  /* Estilos para la sección de "INYECCIÓN INDIRECTA" */
+  .bg-white.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: white;
+  }
+
+  .inyeccion-indirecta-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .inyeccion-indirecta-tag {
+    background-color: #8ac249;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transform: skewX(-15deg);
+    display: inline-block;
+  }
+
+  .vehiculos-convertidos-title {
+    color: #004d99;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .vehiculos-convertidos-text {
+    color: #333;
+    font-size: 1em;
+  }
+
+  /* Estilos adicionales del "product-slider" (parecen no estar en uso para los acordeones) */
+  .product-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-slide {
+    transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-info {
+    margin-bottom: 1rem;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.75rem;
+  }
+
+  .product-slider .product-slide img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product-slider .product-slide details {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-slider .product-slide details[open] {
+    padding-bottom: 20px;
+  }
+
+  .product-slider .product-slide details summary {
+    font-weight: 600;
+    color: #2b6cb0;
+  }
+
+  @media (max-width: 768px) {
+    .product-slider {
+      grid-template-columns: 1fr;
+    }
+    .product-slider .product-slide img {
+      width: 100%;
+      max-width: none;
+    }
+  }   
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const detailsElements = document.querySelectorAll('details');
+
+        detailsElements.forEach(function(details) {
+            details.addEventListener('toggle', function() {
+                if (this.open) {
+                    // Cierra todos los demás acordeones
+                    detailsElements.forEach(function(otherDetails) {
+                        if (otherDetails !== details && otherDetails.open) {
+                            otherDetails.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+<a href="https://api.whatsapp.com/send?phone=+51936014249&text=Hola, vengo de la página web,%20me brindan%20más%20información" 
+class="whatsapp-float" 
+target="_blank">
+<img src="images/social.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
+<style>
+    /* Ícono flotante de WhatsApp */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #25D366;
+        padding: 15px; /* Ajustamos el padding */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 75px; /* Tamaño más grande */
+        height: 75px; /* Tamaño más grande */
+    }
+    
+    /* Imagen del ícono de WhatsApp */
+    .whatsapp-float img {
+        width: 55px; /* Ajustamos el tamaño del icono */
+        height: 55px;
+        object-fit: contain;
+    }
+    </style>
+</body>
+</html>
