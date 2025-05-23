@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Multi Service FLASH - Conversiones GNV-GLP</title>
+    <title>Multi Service Flash - Conversiones GNV-GLP</title>
     <link rel="icon" href="images/multiflashlogo.png" type="image/png" sizes="128x128">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,20 +15,17 @@
     <script src="https://kit.fontawesome.com/9b8103ef2f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
+    
 
 </head>
 
 <body>
-
-    <header class="encabezado" id="inicio">
+    <header class="barra-navegacion" id="inicio">
         <div class="contenido-navegacion">
             <div class="logo">
                 <h2><span><img src="images/logo.png" alt="Logo"></span></h2>
-            </div>    
+            </div>
             <nav class="navegacion ocultar">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -36,55 +33,87 @@
                     <li><a href="#servicio">Servicios</a></li>
                     <li><a href="#metodos">Métodos de pago</a></li>
                     <li><a href="#ubicacion">Ubicación</a></li>
-                    <li><a href="#inicio">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-    
             <div class="hamburguesa">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </header>
-    <header class="encabezado" id="inicio">
-        <div class="contenido-encabezado">
-            <!-- Texto -->
-            <div class="texto-encabezado">
-                <h1>Convierte tu vehículo a GNV</h1>
-            </div>
-    
-            <!-- Formulario -->
-            <div class="formulario-container">
-                <form class="formulario-encabezado">
-                    <h2>COTIZA TU CONVERSIÓN AQUÍ</h2>
-    
-                    <div class="input-encabezado">
-                        <label for="nombre">Nombre y Apellido</label>
-                        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
-                    </div>
-    
-                    <div class="input-encabezado">
-                        <label for="placa">Placa del Auto</label>
-                        <input type="text" id="placa" placeholder="Ej: ABC-123" required>
-                    </div>
-    
-                    <div class="input-encabezado">
-                        <label for="telefono">Teléfono o Celular</label>
-                        <input type="tel" id="telefono" placeholder="Ej: 999 999 999" required>
-                    </div>
-    
-                    <div class="input-encabezado">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" placeholder="Ej: correo@email.com" required>
-                    </div>
-    
-                    <button type="submit" class="btn azul">Solicitar Información</button>
-                </form>
-            </div>
-        </div>
-    </header>
-    
-    
-    
+ 
+<div class="encabezado-banner">
+  <picture>
+    <source media="(max-width: 768px)" srcset="images/BANNER_MOVIL.jpeg">
+    <img src="images/BANNER PW.png" alt="Banner" class="imagen-banner-simple">
+  </picture>
+  <a href="contacto.html" class="btn-mas-info">Más Información</a>
+</div>
+
+<style>
+/* Estilos generales para el contenedor del banner */
+/* Estilos generales para el contenedor del banner */
+.encabezado-banner {
+  position: relative;
+  width: 100%;
+  /* Define la proporción del banner para escritorio (ancho / alto) */
+  aspect-ratio: 1277 / 473;
+  /* Mantenemos el margen original para escritorio */
+  margin-top: 100px; 
+  /* Importante para que 'object-fit: cover' funcione bien y no haya desbordamiento */
+  overflow: hidden; 
+}
+
+/* Estilos para las imágenes dentro del elemento <picture> (tanto escritorio como móvil) */
+.encabezado-banner picture,
+.encabezado-banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* Asegura que la imagen cubra todo el espacio del contenedor,
+     recortando si es necesario para mantener la proporción del contenedor */
+  object-fit: cover; 
+}
+
+/* Estilos para el botón "Más Información" (versión escritorio) */
+.btn-mas-info {
+  position: absolute;
+  bottom: 80px;
+  right: 135px;
+  padding: 20px 50px;
+  background-color: #0054a6;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mas-info:hover {
+  background-color: #004080;
+}
+
+@media (max-width: 768px) {
+  .encabezado-banner {
+    aspect-ratio: 1024 / 1536;
+    margin-top: 150px !important; /* Add !important here */
+  }
+  /* ... other mobile styles */
+
+  /* Estilos para el botón "Más Información" (versión móvil) */
+  .btn-mas-info {
+    bottom: 15px; /* Más cerca del borde inferior en móvil */
+    right: 19px; /* Más cerca del borde derecho en móvil */
+    padding: 14px 30px; /* Menor padding */
+    font-size: 20px; /* Menor tamaño de fuente */
+    border-radius: 30px; /* Menos redondeado */
+  }
+}
+</style>
+                
     <div class="ventajas">
         <div class="contenido-ventajas contenedor">
             <div class="ventaja">
@@ -129,48 +158,13 @@
                     economia de nuestros clientes que es nuestra prioridad. Contamos
                     tambien con alta gama de tecnologia en los equipos de conversion (Equipos
                     netamente italianos). </p>
-                <a href="#" class="btn bordes"> Más información </a>
+                <a href="contacto.html" class="btn bordes"> Más información </a>
             </div>
         </div>
     </section>
 
-    <!-- Enlace directo a la imagen sin texto visible -->
-    <section class="finan banner" id="servicio">
-        <img src="images/BANNER PW.png" alt="Banner">
-    </section>
-
-    <style>
-        /* Elimina márgenes generales */
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Sección del banner */
-        .finan.banner {
-            text-align: center;
-            width: 100%;
-            padding: 0;
-            box-sizing: border-box;
-            padding-bottom: 30px; /* ✅ Añadimos padding en vez de margin */
-        }
-        
-        /* Imagen del banner */
-        .finan.banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        /* Espaciado entre secciones */
-        section {
-            padding: 20px 0; /* También puedes aumentar esto si el siguiente bloque está muy pegado */
-        }
-        </style>
-        
-
-    <section class="servicios contenedor">
+    
+    <section class="servicios contenedor" id="servicio">
         <div class="acordeon">
             <div class="acordeon-content">
     
@@ -382,7 +376,7 @@
             object-fit: contain;
         }
     </style>
-      <section id="formulario">
+  <section id="formulario">
         <!-- Aquí va tu formulario -->
       </section>
       <section class="testimonios-container">
@@ -535,91 +529,247 @@
             }
         }
     </style>
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Slider de los carros (sección #slider-section)
-            const swiperCarros = new Swiper('.slider-container', {
-                loop: true,
-                slidesPerView: 'auto',
-                spaceBetween: 5,
-                autoplay: {
-                    delay: 1000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                speed: 300,
-                grabCursor: true,
-                freeMode: false,
-                rewind: false,
-                loopAdditionalSlides: 10,
-            });
-    
-            // Slider de los testimonios (sección .slider-wrapper)
-            const swiperTestimonios = new Swiper('.slider-wrapper', {
-                loop: true,
-                slidesPerView: 'auto', // Ajustamos a 'auto' para un comportamiento más fluido en el bucle
-                spaceBetween: 30,
-                centeredSlides: true, // Centrar el slide activo
-                autoplay: {
-                    delay: 3000, // Mantén un retraso adecuado
-                    disableOnInteraction: false,
-                },
-                speed: 800, // Velocidad de transición suave
-                rewind: false,
-                loopAdditionalSlides: 10,
-                grabCursor: true,
-            });
-        });
-    </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
 
+    // --- Carrusel de Testimonios (JavaScript Puro) ---
+    const carruselTestimonios = document.getElementById('carrusel-testimonios');
+    const slides = Array.from(carruselTestimonios.getElementsByClassName('slide'));
+    const totalSlides = slides.length;
+
+    let currentIndex = 0;
+    let autoplayInterval;
+    const autoplayDelay = 7000; // 7 segundos
+
+    // Función para actualizar el ancho de los slides y la posición del carrusel
+    function updateCarousel() {
+        const sliderWrapper = carruselTestimonios.parentElement; // .slider-wrapper
+        const wrapperWidth = sliderWrapper.offsetWidth; // Ancho visible del contenedor
+
+        let slidesPerView = 1; // Default para móviles
+        let spaceBetween = 30; // Espacio entre slides
+
+        if (window.innerWidth >= 1024) {
+            slidesPerView = 3;
+            spaceBetween = 30;
+        } else if (window.innerWidth >= 768) {
+            slidesPerView = 2;
+            spaceBetween = 30;
+        }
+
+        // Calcular el ancho de cada slide para que quepan correctamente
+        // (ancho_total - (espacio_entre_slides * (num_slides_visibles - 1))) / num_slides_visibles
+        const slideWidth = (wrapperWidth - (spaceBetween * (slidesPerView - 1))) / slidesPerView;
+
+        slides.forEach(slide => {
+            slide.style.width = `${slideWidth}px`;
+            slide.style.marginRight = `${spaceBetween}px`;
+        });
+
+        // Asegurarse de que el último slide no tenga margin-right extra (aunque el loop lo complica un poco)
+        // Por simplicidad en un carrusel puro y con loop/clones, a veces se maneja con padding en el contenedor o con clones extra.
+        // Aquí lo haremos moviendo el contenedor.
+
+        // Calcular el desplazamiento basado en el slide actual
+        // Centrar el slide: (ancho del wrapper / 2) - (ancho del slide / 2)
+        const offset = (wrapperWidth / 2) - (slideWidth / 2);
+        
+        let transformValue;
+        if (slidesPerView === 1) {
+            // Para un solo slide visible, lo centramos y movemos según el índice
+            transformValue = `translateX(${-(currentIndex * (slideWidth + spaceBetween))}px)`;
+        } else {
+            // Para múltiples slides, el cálculo de centrado es más complejo.
+            // Es más fácil pensar en mover el inicio del primer slide visible
+            // al punto donde debería estar el primer slide visible.
+            // Para simplificar, haremos un movimiento simple basado en el índice.
+            // Un carrusel "centrado" real con múltiples slides es más complejo de calcular en puro JS.
+            // Si el objetivo es que solo el primero de un grupo esté visible, el cálculo es más sencillo.
+            // En este caso, simplemente deslizamos por un "bloque" de movimiento.
+            transformValue = `translateX(${-(currentIndex * (slideWidth + spaceBetween))}px)`;
+            
+            // Para que quede visible el primer slide del "grupo" centrado,
+            // necesitas calcular cuántos slides hay a la izquierda del centro.
+            // Si slidesPerView es 2, y quieres que el primer slide esté a la izquierda del centro
+            // y el segundo a la derecha del centro, el cálculo de transform es más complejo.
+            // Aquí, lo mantendremos simple: el primer slide de cada grupo alineado a la izquierda.
+        }
+
+        carruselTestimonios.style.transform = transformValue;
+    }
+
+    // Navegación (para futura implementación de flechas si las quieres añadir)
+    function showSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides; // Asegura que el índice esté dentro de los límites
+        updateCarousel();
+    }
+
+    // Funciones de Autoplay
+    function startAutoplay() {
+        stopAutoplay(); // Asegura que no haya intervalos duplicados
+        autoplayInterval = setInterval(() => {
+            // Calcula cuántos "slides" se desplazan en cada paso.
+            // Para una experiencia de carrusel donde "entra el siguiente bloque"
+            // movemos por la cantidad de slides mostrados.
+            let slidesToMove = 1; // Puedes ajustar esto si quieres que se desplace por ejemplo, 2 slides a la vez.
+
+            // Clonar el primer/los primeros N slides y moverlos al final para un efecto de loop "infinito"
+            // Esto es mucho más complejo que solo cambiar el `transform` y requiere manipular el DOM.
+            // Para una simulación simple, haremos un movimiento de un solo slide a la vez, y al final,
+            // reseteamos al inicio, lo cual puede ser abrupto sin transiciones avanzadas.
+
+            currentIndex++;
+            if (currentIndex >= totalSlides) {
+                // Al llegar al final, reseteamos a 0 para simular el loop
+                // (esto puede causar un "salto" si no se implementa con clones)
+                currentIndex = 0;
+                carruselTestimonios.style.transition = 'none'; // Quita la transición para el salto
+                updateCarousel();
+                setTimeout(() => {
+                    carruselTestimonios.style.transition = 'transform 1s ease-in-out'; // Vuelve a poner la transición
+                }, 50); // Pequeño delay para que el navegador aplique el 'none'
+            } else {
+                updateCarousel();
+            }
+        }, autoplayDelay);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    // Inicialización y reajuste en resize
+    window.addEventListener('resize', () => {
+        updateCarousel(); // Reajusta el carrusel cuando la ventana cambia de tamaño
+        startAutoplay(); // Reinicia el autoplay para aplicar la nueva configuración
+    });
+
+    updateCarousel(); // Llama una vez al inicio para establecer el layout inicial
+    startAutoplay(); // Inicia el autoplay
+});
+</script>
 
 <section class="certi-banner">
-
-    <img src="images/Certificacion Anual.png" alt="certi.anual">
-
+    <picture>
+        <source media="(max-width: 768px)" srcset="images/Certificacion_Anual_MOVIL.jpg">
+        <img src="images/Certificacion Anual.png" alt="certi.anual">
+    </picture>
 </section>
 <style>
-    
-
-    body, html {
+       body, html {
         margin: 0;
         padding: 0;
+        overflow-x: hidden; /* Previene el scroll horizontal en caso de desbordamiento */
+        font-family: Arial, sans-serif; /* Puedes definir una fuente base aquí */
     }
 
-    /* Sección del banner */
-    .certi-banner {
-        text-align: center;
+    /* ****************************************************** */
+    /* ESTILOS POR DEFECTO (PARA ESCRITORIO / LAPTOP)        */
+    /* ****************************************************** */
+
+    /* Contenedor del banner principal (donde está la imagen grande con el botón) */
+    .encabezado-banner {
+        position: relative;
         width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-        padding-bottom: 20px; /* Espacio abajo */
-        margin-bottom: 50px; /* Ajusta este valor según el espacio que necesites */
-
+        /* DEFINE LA PROPORCIÓN PARA ESCRITORIO: ANCHO / ALTO de BANNER PW.png */
+        aspect-ratio: ANCHO_IMAGEN_ESCRITORIO_BANNER / ALTO_IMAGEN_ESCRITORIO_BANNER; 
+        margin-top: 100px; /* Margen superior general */
+        margin-bottom: 0px; /* ¡AJUSTADO! Elimina el margen inferior en escritorio */
+        overflow: hidden; /* Importante para 'object-fit: cover' */
     }
 
-    /* Imagen del banner */
+    /* Imágenes dentro del <picture> para el banner principal (afecta a ambas) */
+    .encabezado-banner picture,
+    .encabezado-banner img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover; /* Asegura que la imagen cubra todo el espacio del contenedor */
+        margin: 0 auto; /* Centra la imagen */
+        /* NO SE AÑADE PADDING AQUÍ EN ESCRITORIO para que no haya espacio blanco */
+    }
+
+    /* Botón "Más Información" (estilos de escritorio) */
+    .btn-mas-info {
+        position: absolute;
+        bottom: 80px;
+        right: 135px;
+        padding: 20px 50px;
+        background-color: #0054a6;
+        color: white;
+        font-weight: bold;
+        font-size: 27px;
+        border-radius: 40px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-mas-info:hover {
+        background-color: #004080;
+    }
+
+    /* Contenedor de la sección de certificación (.certi-banner) */
+    .certi-banner {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+        overflow: hidden; /* Importante para 'object-fit: cover' */
+        
+        /* DEFINE LA PROPORCIÓN PARA ESCRITORIO: ANCHO / ALTO de Certificacion Anual.png */
+        aspect-ratio: ANCHO_IMAGEN_ESCRITORIO_CERT / ALTO_IMAGEN_ESCRITORIO_CERT; 
+        
+        margin-top: 0px;    /* ¡AJUSTADO! Elimina el margen superior en escritorio */
+        margin-bottom: 0px; /* ¡AJUSTADO! Elimina el margen inferior en escritorio */
+        /* Eliminamos el padding-bottom directo del .certi-banner si la imagen ya tiene padding */
+    }
+
+    /* Imágenes dentro del <picture> para la sección de certificación */
+    .certi-banner picture,
     .certi-banner img {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        padding-top: 20px;    /* Espacio arriba */
-padding-bottom: 20px; /* Espacio abajo */
-
+        object-fit: cover; /* La imagen cubrirá el área del contenedor */
+        margin: 0 auto; /* Centra la imagen */
+        
+        /* ¡AJUSTADO! Elimina el padding interno de la imagen en escritorio */
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
-    /* Estilos para la siguiente sección (ejemplo) */
+    /* Estilos para la siguiente sección (ejemplo, para verificar el espaciado) */
     .siguiente-seccion {
         background-color: #f0f0f0;
         padding: 20px;
         text-align: center;
     }
+    @media (max-width: 768px) {
+    /* ... (Otros estilos para móvil que ya tengas, como .encabezado-banner o .btn-mas-info) ... */
+
+    /* SECCIÓN DE CERTIFICACIÓN (Móvil) */
+    .certi-banner {
+        /* Aquí es donde defines la proporción para MÓVIL.
+           ¡AJUSTA ESTO a las dimensiones exactas de tu Certificacion_Anual_MOVIL.jpg/png! */
+        aspect-ratio: ANCHO_IMAGEN_MOVIL_CERT / ALTO_IMAGEN_MOVIL_CERT; 
+        
+        margin-top: 0px;    /* Elimina el margen superior del contenedor */
+        margin-bottom: 0px; /* Elimina el margen inferior del contenedor */
+    }
+
+    /* Estilos para la imagen dentro del picture (Certificación) en móvil */
+    .certi-banner picture,
+    .certi-banner img {
+        padding-top: 0px;    /* Elimina el padding superior de la imagen */
+        padding-bottom: 0px; /* Elimina el padding inferior de la imagen */
+    }
+}
 </style>
           
 <!-- La sección de Métodos de Pago -->
+
 <section class="metodos-pago" id="metodos">
     <h1>Nuestras Formas de Pago</h1>
     <p class="alias">Multi Service Flash</p>
@@ -635,7 +785,7 @@ padding-bottom: 20px; /* Espacio abajo */
                 <p><strong>FACILIDAD DE PAGO:</strong> Aceptamos todas las tarjetas de crédito y débito, sin recargos.</p>
                 <p><strong>TECNOLOGÍA DE 5TA GENERACIÓN:</strong> Instalamos tu kit de conversión con la mejor tecnología.</p>
             </div>
-            <a href="#inicio" class="boton-info">MÁS INFORMACIÓN</a>
+            <a href="contacto.html"  class="boton-info">MÁS INFORMACIÓN</a>
         </div>
         <style>
         #cabecera {
@@ -644,6 +794,7 @@ padding-bottom: 20px; /* Espacio abajo */
             /* O */
             padding-bottom: 5px; /* Reduce este valor */
           }
+    
         </style>
         <!-- Método 2: Financiamiento -->
         <div class="metodo">
@@ -658,7 +809,7 @@ padding-bottom: 20px; /* Espacio abajo */
                 <p><strong>PLAZO DE 3 AÑOS:</strong> Para devolver el monto de financiamiento.</p>
                 <p><strong>FÁCIL PAGO:</strong> A través del consumo de GNV.</p>
             </div>
-            <a href="#inicio" class="boton-info">MÁS INFORMACIÓN</a>
+            <a href="contacto.html" class="boton-info">MÁS INFORMACIÓN</a>
         </div>
     </div>
 </section>
@@ -695,8 +846,7 @@ padding-bottom: 20px; /* Espacio abajo */
       display: block;
     }
   </style>
-  
-  <script>
+   <script>
     const promoSlider = document.querySelector('.promo-slider');
     let promoIndex = 0;
     const totalSlides = promoSlider.children.length;
@@ -710,43 +860,54 @@ padding-bottom: 20px; /* Espacio abajo */
     setInterval(showNextSlide, interval);
   </script>
   
-
-    
+  
+   <section id="ubicacion">
     <section id="ubicacion">
-       <section id="ubicacion">
-    <h2><span class="subtitulo">UBICANOS EN LIMA NORTE!!</span></h2>
-    <p class="direccion">Av. Universitaria 3748 - Los Olivos</p>
+ <h2><span class="subtitulo">UBICANOS EN LIMA NORTE!!</span></h2>
+ <p class="direccion">Av. Universitaria 3748 - Los Olivos</p>
 </section>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d975.6812029556936!2d-77.08312139999997!3d-11.993533700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9105cf719abd504d%3A0x9648d1632da3c39b!2sMulti%20Service%20FLASH%2C%20Av.%20Universitaria%203748%2C%20Los%20Olivos%2015301!3m2!1d-11.9935586!2d-77.0830683!5e0!3m2!1ses-419!2spe!4v1740407203115!5m2!1ses-419!2spe" 
-            width="800" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-           
-        </iframe>
-    </section>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d975.6812029556936!2d-77.08312139999997!3d-11.993533700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9105cf719abd504d%3A0x9648d1632da3c39b!2sMulti%20Service%20FLASH%2C%20Av.%20Universitaria%203748%2C%20Los%20Olivos%2015301!3m2!1d-11.9935586!2d-77.0830683!5e0!3m2!1ses-419!2spe!4v1740407203115!5m2!1ses-419!2spe" 
+         width="800" 
+         height="450" 
+         style="border:0;" 
+         allowfullscreen="" 
+         loading="lazy" 
+         referrerpolicy="no-referrer-when-downgrade">
+        
+     </iframe>
+ </section>
 
-    <footer class="footer">
-        <div class="social-container">
-            <a href="https://www.facebook.com/multiserviceflash" target="_blank" class="social-link facebook">
-                <i class="fab fa-facebook-f"></i> FACEBOOK
-            </a>
-            <a href="https://www.instagram.com/multiserviceflash" target="_blank" class="social-link instagram">
-                <i class="fab fa-instagram"></i> INSTAGRAM
-            </a>
-            <a href="https://www.tiktok.com/@multiserviceflash" target="_blank" class="social-link tiktok">
-                <i class="fab fa-tiktok"></i> TIKTOK
-            </a>
-        </div>
-        <p class="copyright">
-            © 2025 Multi Service FLASH - Todos los derechos reservados.
-        </p>
-    </footer>    
-    <!-- Espacio en blanco -->
-    <div style="height: 30px;"></div>
+    <!-- FOOTER CON ANCHO COMPLETO Y SIN ESPACIOS LATERALES -->
+<div style="width: 100%; background-color: black; color: white; margin: 0; padding: 0;">
+    <footer class="footer" style="padding: 20px 10px; text-align: center;">
+  
+      <!-- Redes Sociales centradas -->
+      <div class="social-container" style="margin-bottom: 20px;">
+        <a href="https://www.facebook.com/multiserviceflash" target="_blank" class="social-link facebook" style="margin: 0 15px; color: white;">
+          <i class="fab fa-facebook-f"></i> FACEBOOK
+        </a>
+        <a href="https://www.instagram.com/multiserviceflash" target="_blank" class="social-link instagram" style="margin: 0 15px; color: white;">
+          <i class="fab fa-instagram"></i> INSTAGRAM
+        </a>
+        <a href="https://www.tiktok.com/@multiserviceflash" target="_blank" class="social-link tiktok" style="margin: 0 15px; color: white;">
+          <i class="fab fa-tiktok"></i> TIKTOK
+        </a>
+      </div>
+  
+      <!-- Libro de Reclamaciones + Derechos reservados centrados debajo -->
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <a href="libro-reclamaciones.html" target="_blank" style="margin-bottom: 10px;">
+          <img src="images/libro-reclamacioness.jpg" alt="Libro de Reclamaciones" style="height: 50px;">
+        </a>
+        <p style="margin: 0; font-size: 15px;">© 2025 Multi Service FLASH - Todos los derechos reservados.</p>
+      </div>
+  
+    </footer>
+  </div>
+  
+      
+      </footer>
     
     <a href="https://api.whatsapp.com/send?phone=+51936014249&text=Hola, vengo de la página web,%20me brindan%20más%20información" 
    class="whatsapp-float" 
@@ -754,23 +915,7 @@ padding-bottom: 20px; /* Espacio abajo */
    <img src="images/social.png" alt="WhatsApp" class="whatsapp-icon">
 </a>
 
-
-    <script src="js/app.js"></script>
     <script>
-        const contenedor = document.querySelector('.contenedor-testimonios');
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0;
-      
-        function slideNext() {
-          const isMobile = window.innerWidth < 768;
-          const totalSlides = slides.length;
-          const visibleCount = isMobile ? 1 : 3;
-      
-          currentIndex = (currentIndex + 1) % totalSlides;
-      
-          const offset = -(currentIndex * (100 / visibleCount));
-          contenedor.style.transform = `translateX(${offset}%)`;
-        }
       
         // Inicia el deslizador
         setInterval(slideNext, 5000);
@@ -780,9 +925,32 @@ padding-bottom: 20px; /* Espacio abajo */
           contenedor.style.transform = 'translateX(0)';
           currentIndex = 0;
         });
+        // Seleccionar los elementos del menú hamburguesa y la navegación
+const hamburguesa = document.querySelector('.hamburguesa');
+const navegacion = document.querySelector('.navegacion');
+
+// Toggle del menú al hacer clic en la hamburguesa
+hamburguesa.addEventListener('click', () => {
+  navegacion.classList.toggle('ocultar');
+});
+
+// Cerrar el menú cuando se hace clic en un enlace
+const menuLinks = document.querySelectorAll('.navegacion a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    // Solo cerrar si es un enlace interno (ancla #)
+    if (link.getAttribute('href').startsWith('#')) {
+      navegacion.classList.add('ocultar');
+    }
+  });
+});
+
       </script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
