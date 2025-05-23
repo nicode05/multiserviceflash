@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/multiflashlogo.png" type="image/png" sizes="128x128">
+    <title>Libro de Reclamaciones - Multi Service Flash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem; /* Añadido para un look más suave */
+        }
+        .section-title {
+            font-weight: bold;
+            color: #004990;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0; /* Línea debajo del título */
+            padding-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .section-title .required-note {
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #666;
+        }
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+            display: block; /* Asegura que la etiqueta ocupe su propia línea */
+        }
+        .form-group input:not([type="radio"]),
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem; /* Reducido para mejor espaciado */
+        }
+        /* Estilos específicos para los radio buttons */
+        .form-check {
+            margin-bottom: 0.5rem;
+        }
+        .form-check-input {
+            margin-right: 0.5rem;
+        }
+        .form-check-label {
+            font-weight: normal; /* Las etiquetas de radio no tan bold */
+        }
+        /* Estilos para el mensaje de error "Este campo es requerido" */
+        .error-message { /* Este estilo ya no se usa para el texto, pero se mantiene por si acaso */
+            color: #dc3545; /* Rojo de Bootstrap para errores */
+            font-size: 0.85em;
+            margin-top: -0.5rem; /* Ajusta el margen para pegarlo al campo */
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .error-line {
+            border-bottom: 1px solid #dc3545; /* Línea roja */
+            display: block;
+            margin-top: -0.25rem; /* Superpone un poco con el mensaje */
+            width: 100%;
+        }
+        /* Estilo para el espacio en blanco de "Acciones tomadas por la empresa" */
+        .blank-space-for-establishment {
+            border: 1px solid #ccc;
+            min-height: 100px; /* Altura mínima para el espacio en blanco */
+            background-color: #f0f0f0; /* Un color de fondo sutil para indicar que es un área */
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-style: italic;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .btn-submit {
+            background-color: #004990;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 0.25rem; /* Añadido para consistencia */
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #003366;
+        }
+
+        /* Estilos del checkbox-container que ya tenías */
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .checkbox-container input[type="checkbox"] { /* Específico para checkbox */
+            margin-top: 5px;
+            width: auto; /* Ancho automático para checkbox */
+        }
+        .checkbox-text {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .checkbox-text a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        /* Estilos para las definiciones de Reclamo/Queja */
+        .definitions-section {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #004990;
+            border-radius: 0.25rem;
+            background-color: #f5fafd;
+        }
+        .definitions-section p {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .definitions-section strong {
+            color: #004990;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="section-title">MULTI SERVICE FLASH</h2>
+    <p><strong>SOLUCIONES FLASH MULTI SERVICE FLASH CAR/20603544294</strong></p>
+    <p>RUC: 20603544294</p>
+    <p>Dirección: Av. Universitaria 3748, Los Olivos</p>
+    <p>Teléfono: 936014249</p>
+
+    <form action="procesar_reclamo.php" method="POST">
+
+        <h2 class="section-title">Datos de la persona que presenta el Reclamo/Queja</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nombres">Nombres *</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="apellidoPaterno">Apellido Paterno *</label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Ingrese su apellido paterno" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="apellidoMaterno">Apellido Materno *</label>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Ingrese su apellido materno" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="docIdentidad">Doc. Identidad *</label>
+                    <select id="docIdentidad" name="docIdentidad" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="dni">DNI</option>
+                        <option value="ce">CE</option>
+                        <option value="pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="numDocumento">Nº Documento *</label>
+                    <input type="text" id="numDocumento" name="numDocumento" placeholder="Ingrese su número de documento" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                </div>
+            </div>
+            </div>
+
+        <h2 class="section-title">
+            Detalles del Reclamo o Queja del Cliente
+            <span class="required-note">* Datos obligatorios</span>
+        </h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="d-block">Tipo *</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoReclamoQueja" id="radioReclamo" value="reclamo" required>
+                        <label class="form-check-label" for="radioReclamo">Reclamo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoReclamoQueja" id="radioQueja" value="queja">
+                        <label class="form-check-label" for="radioQueja">Queja</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="numPedido">Nº pedido</label>
+                    <input type="text" id="numPedido" name="numPedido" placeholder="Ingrese número de pedido">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="d-block">Comprobante</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoComprobante" id="radioBoleta" value="boleta">
+                        <label class="form-check-label" for="radioBoleta">Boleta</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoComprobante" id="radioFactura" value="factura">
+                        <label class="form-check-label" for="radioFactura">Factura</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fechaCompra">Fecha de compra</label>
+                    <input type="date" id="fechaCompra" name="fechaCompra">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="montoReclamado">Monto reclamado S/.</label>
+                    <input type="number" id="montoReclamado" name="montoReclamado" placeholder="0.00" step="0.01">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="d-block">Identificación del bien contratado *</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="bienContratado" id="radioServicio" value="servicio" checked required>
+                        <label class="form-check-label" for="radioServicio">Servicio</label>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="detalleReclamo">Detalle del reclamo *</label>
+                    <textarea id="detalleReclamo" name="detalleReclamo" placeholder="Este campo es requerido" rows="5" required></textarea>
+                    <span class="error-line"></span>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="solicitud">Solicitud *</label>
+                    <textarea id="solicitud" name="solicitud" placeholder="Este campo es requerido" rows="5" required></textarea>
+                    <span class="error-line"></span>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Acciones tomadas por la empresa (Para ser llenado por el establecimiento)</label>
+                    <div class="blank-space-for-establishment">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="definitions-section">
+            <p><strong>(1) Reclamo:</strong> Disconformidad relacionada a los productos y/o servicios.</p>
+            <p><strong>(2) Queja:</strong> Disconformidad no relacionada a los productos y/o servicios; o, malestar o descontento a la atención al público.</p>
+        </div>
+
+        <div class="checkbox-container">
+            <input type="checkbox" name="aceptaTerminos" required>
+            <div class="checkbox-text">
+                Acepto los <a href="terminos-condiciones.html" target="_blank">términos y condiciones</a> y las <a href="politica-privacidad.html" target="_blank">políticas de privacidad</a>.<br><br>
+                La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.<br><br>
+                El proveedor deberá dar respuesta al reclamo en un plazo no mayor a treinta (30) días calendario, pudiendo ampliar el plazo hasta por treinta (30) días más, previa comunicación al consumidor.
+            </div>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn-submit">Enviar</button>
+        </div>
+
+    </form>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

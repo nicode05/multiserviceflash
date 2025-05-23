@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Multi Service Flash</title>
+  <link rel="icon" href="images/multiflashlogo.png" type="image/png" sizes="128x128">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .contacto-encabezado {
+     background-image: url('images/inyeccioon.avif');
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .contacto-encabezado::before {
+      content: "";
+      background-image: url('https://www.agn.com.pe/wp-content/uploads/2023/11/img-contacto.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.15;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .contacto-encabezado h1,
+    .contacto-encabezado p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .contacto-encabezado h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #cce6ff;
+    }
+
+ .formulario-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 20px auto 40px; /* antes estaba -40px */
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    /* CAMBIOS AQUÍ: */
+    border: 2px solid #005baa; /* Define un borde de 2px, sólido y de color azul */
+}
+
+    .formulario-container h2 {
+      text-align: center;
+      color: #005baa;
+      margin-bottom: 25px;
+    }
+
+    .input-encabezado {
+      margin-bottom: 20px;
+    }
+
+    .input-encabezado input {
+  border: 1px solid #005baa;
+  padding: 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.input-encabezado input:focus {
+  border-color: #003d7a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 91, 170, 0.5);
+}
+
+.input-encabezado input,
+.input-encabezado textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #005baa;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.input-encabezado input:focus,
+.input-encabezado textarea:focus {
+  border-color: #003d7a;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 91, 170, 0.4);
+}
+
+.input-encabezado {
+  margin-bottom: 25px;
+}
+
+
+    .checkbox-legal {
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .checkbox-legal a {
+      color: #005baa;
+      text-decoration: underline;
+    }
+
+    .btn.azul {
+      width: 100%;
+      background-color: #005baa;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn.azul:hover {
+      background-color: #003d7a;
+    }
+  </style>
+</head>
+<body>
+<section class="contacto-encabezado">
+  <h1>Contacto</h1>
+
+  <div class="breadcrumb">
+    <a href="index.html" class="breadcrumb-link"></a> Inicio › Contacto
+  </div>
+</section>
+
+ <div class="formulario-container">
+  <!-- Solo UNA etiqueta <form>, y con action y method -->
+  <form action="registro_datos.php" method="POST" class="formulario-encabezado">
+  <h2>COTIZA TU CONVERSIÓN AQUÍ</h2>
+
+  <div class="input-encabezado">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+  </div>
+
+  <div class="input-encabezado">
+    <input type="text" id="placa" name="placa" placeholder="Placa del Auto" required>
+  </div>
+
+  <div class="input-encabezado">
+    <input type="tel" id="telefono" name="telefono" placeholder="Número de WhatsApp" required>
+  </div>
+
+  <div class="input-encabezado">
+    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+  </div>
+
+  <div class="input-encabezado">
+    <input type="text" id="mensaje" name="mensaje" placeholder="Mensaje (Opcional)">
+  </div>
+
+  <div class="checkbox-legal">
+    <input type="checkbox" id="acepto" name="acepto" required>
+    <label for="acepto">
+      Acepto los <a href="/terminos-condiciones.html">Términos y Condiciones</a> y la <a href="/politica-privacidad.html">Política de Privacidad</a>
+    </label>
+  </div>
+
+  <button type="submit" class="btn azul">Solicitar Información</button>
+</form>
+
+</div>
+
+    
+  </div>
+
+</body>
+</html>
